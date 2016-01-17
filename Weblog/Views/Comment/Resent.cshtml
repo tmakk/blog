@@ -1,0 +1,16 @@
+﻿@{
+    Layout = null;
+}
+@model Weblog.Models.ResentDateModel
+<div class="post-wrap">
+<h3>resent comments</h3>
+<ul>
+    @foreach (var item in Model.Items)
+    {
+        <li>
+            <p class="date">@item.Date.ToString("D")<span>@item.Date.ToString("hh:mm")</span></p>
+            <p class="post"><a href="@item.URL">@item.text</a></p>
+        </li>
+    }
+</ul>
+</div>

@@ -1,0 +1,33 @@
+﻿@model Weblog.Models.ArticleModel
+<div class="wrap-article">
+    <h2>@Model.Title</h2>
+    <p class="date"><span>@Model.Date.ToString("D")</span> <span>@Model.Date.ToString("hh:mm")</span></p>
+    <div class="text-block">
+        @Html.Raw(Model.Body)
+    </div>
+</div>
+<div class="wrap-comment">
+    <h2>Коментарии</h2>
+    <ul class="list-comm">
+        @foreach (var item in Model.Comments)
+        {
+            <li>
+                <div class="avatar"><img src="~/contents/images/ava-com.png" alt=""></div>
+                <div class="comment-text">
+                    <a href="#">@item.UserName</a>
+                    <p class="date"><span>@item.Date.ToString("D")</span> <span>@item.Date.ToString("hh:mm")</span></p>
+                    <p>@item.Body</p>
+                </div>
+            </li>
+        }
+
+
+    </ul>
+</div>
+<div class="add-comment">
+    <textarea name="" placeholder="ваш комент" class="txt-area"></textarea>
+    <div class="wrap-btn">
+        <button class="btn-save">сохранить</button>
+        <button class="btn-cansel">отмена</button>
+    </div>
+</div>

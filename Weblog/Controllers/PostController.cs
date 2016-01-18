@@ -6,9 +6,11 @@ using System.Web.Mvc;
 
 namespace Weblog.Controllers
 {
+    [RoutePrefix ("Post")]
     public class PostController : Controller
     {
         // GET: Comment
+        [Route("Resent")]
         public ActionResult Resent()
         {
             var model = new Models.ResentDateModel();

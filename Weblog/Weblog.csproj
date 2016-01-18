@@ -104,6 +104,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AddCommentsModel.cs" />
     <Compile Include="Models\ArticleModel.cs" />
     <Compile Include="Models\CommentItemModel.cs" />
     <Compile Include="Models\ResentDateItemModel.cs" />
@@ -118,6 +119,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Comment\Resent.cshtml" />
     <Content Include="Views\Post\Resent.cshtml" />
+    <Content Include="Views\Home\addcomments.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

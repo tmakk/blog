@@ -1,4 +1,5 @@
-﻿@model Weblog.Models.ArticleModel
+﻿@using Weblog.Models
+@model Weblog.Models.ArticleModel
 <div class="wrap-article">
     <h2>@Model.Title</h2>
     <p class="date"><span>@Model.Date.ToString("D")</span> <span>@Model.Date.ToString("hh:mm")</span></p>
@@ -23,11 +24,5 @@
 
 
     </ul>
-</div>
-<div class="add-comment">
-    <textarea name="" placeholder="ваш комент" class="txt-area"></textarea>
-    <div class="wrap-btn">
-        <button class="btn-save">сохранить</button>
-        <button class="btn-cansel">отмена</button>
-    </div>
-</div>
+@Html.Partial("~/Views/Home/addcomments", null, new ViewDataDictionary())
+</div>  
